@@ -1,9 +1,7 @@
 #pragma once
 
+#include "crpch.h"
 #include "Cherry/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Cherry
 {

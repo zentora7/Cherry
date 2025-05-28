@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Cherry
 {
 	class CHERRY_API KeyEvent : public Event
