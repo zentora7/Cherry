@@ -7,6 +7,7 @@ namespace Cherry
 {
 	Application::Application()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -15,9 +16,9 @@ namespace Cherry
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(2560, 1440);
-		CR_TRACE(e);
-
-		while (true);
+		while (m_Running)
+		{
+			m_Window->OnUpdate();
+		}
 	}
 }

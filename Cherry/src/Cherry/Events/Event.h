@@ -33,6 +33,7 @@ namespace Cherry
 	class CHERRY_API Event
 	{
 		friend class EventDispatcher;
+
 	public:
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
@@ -43,6 +44,7 @@ namespace Cherry
 		{
 			return GetCategoryFlags() & category;
 		}
+
 	protected:
 		bool m_Handled = false;
 	};
@@ -51,6 +53,7 @@ namespace Cherry
 	{
 		template<typename T>
 		using EventFn = std::function<bool(T&)>;
+
 	public:
 		EventDispatcher(Event& event)
 			: m_Event(event)
@@ -67,6 +70,7 @@ namespace Cherry
 			}
 			return false;
 		}
+
 	private:
 		Event& m_Event;
 	};

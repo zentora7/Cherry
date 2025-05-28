@@ -10,6 +10,7 @@ namespace Cherry
 		inline int GetMouseButton() const { return m_Button; }
 
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
+
 	protected:
 		KeyEvent(int keycode)
 			: m_Button(keycode) {
@@ -34,6 +35,7 @@ namespace Cherry
 		}
 
 		EVENT_CLASS_TYPE(KeyPressed)
+
 	private:
 		int m_RepeatCount;
 	};
