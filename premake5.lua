@@ -121,12 +121,18 @@ project "Sandbox"
 	filter "configurations:Debug"
 		defines "CR_DEBUG"
 		symbols "On"
+		staticruntime "off"
+		runtime "Debug"
 
 	filter "configurations:Release"
 		defines "CR_RELEASE"
 		optimize "On"
+		staticruntime "off"
+		runtime "Release"
 
 	filter "configurations:Dist"
 		defines "CR_DIST"
 		optimize "On"
+		staticruntime "off"
+		runtime "Release"
 	

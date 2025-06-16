@@ -3,6 +3,7 @@
 // For use by Cherry Applications
 
 #include "Cherry/Application.h"
+#include "Cherry/Layer.h"
 #include "Cherry/Log.h"
 
 // Entry Point
