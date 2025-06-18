@@ -3,8 +3,6 @@
 
 #include "Cherry/Log.h"
 
-//#include <GLFW/glfw3.h>
-
 namespace Cherry
 {
 
@@ -17,8 +15,7 @@ namespace Cherry
 	}
 
 	Application::~Application()
-	{
-	}
+	= default;
 
 	void Application::PushLayer(Layer* layer)
 	{

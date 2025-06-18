@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder
 IncludeDir = {}
 IncludeDir["GLFW"] = "Cherry/vendor/GLFW/include"
+IncludeDir["Glad"] = "Cherry/vendor/Glad/include"
 
 include "Cherry/vendor/GLFW"
+include "Cherry/vendor/Glad"
 
 project "Cherry"
 	location "Cherry"
@@ -38,11 +40,13 @@ project "Cherry"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib",
 	}
 
@@ -56,6 +60,7 @@ project "Cherry"
 		{
 			"CR_PLATFORM_WINDOWS",
 			"CR_BUILD_DLL",
+            "GLFW_INCLUDE_NONE",
 		}
 
 		postbuildcommands
