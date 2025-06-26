@@ -4,3 +4,6 @@
 [submodule "Cherry/vendor/GLFW"]
 	path = Cherry/vendor/GLFW
 	url = https://github.com/zentora7/GLFW
+[submodule "Cherry/vendor/imgui"]
+	path = Cherry/vendor/imgui
+	url = https://github.com/zentora7/imgui
